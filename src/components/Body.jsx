@@ -1,4 +1,5 @@
 import React from 'react';
+
 import '../css/product.css';
 
 
@@ -8,6 +9,7 @@ function BodyHome(){
         "height": "300px", 
         "borderRadius": "21px 21px 0 0"
     };
+    
     return(<div>
         <div className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
   <div className="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">

@@ -33,5 +33,29 @@ function showAlert(title) {
     });
 }
 
+function checkAuth(){
+    const route = '/checkAuth';
+    return fetch(host+route,{headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-cache'
+      },credentials: 'include'}).then(response => response.json()).then(data => {
+        if (data==="OK"){
+            return true;    
+        } else {
+            return false;
+        }
+    });
+}
+
+function Logout(){
+    const route = '/logout';
+    return fetch(host+route,{headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-cache'
+      },credentials: 'include'}).then(res =>res.json()).then(data => console.log(data));
+}
+
 export default showAlert;
-export {host};
+export {host,checkAuth,Logout};
